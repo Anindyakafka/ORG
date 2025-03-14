@@ -1,58 +1,8 @@
-# Table of Contents
+# Org-mode: Emacs/Spacemacs/DOOM emacs and how it helps me with research.
 
-1. [Introduction](#orgb1ffda3)
-  1. [Will this guide be useful for you?](#orgd6f7e75)
-  2. [What is our goal?](#orgddc68b2)
-  3. [Acknowledgements](#org5b92873)
-2. [Installing necessary software](#orga2149ef)
-  1. [Emacs](#org102a7fe)
-  2. [Texlive](#orgc56215b)
-  3. [R](#org7d4ffdf)
-  4. [Pandoc](#org8ca687a)
-3. [Emacs basics](#org9e32d82)
-  1. [Notations](#org4794886)
-  2. [Basic commands](#orgfb4d485)
-4. [Customising Emacs](#customemacs)
-5. [Speed up with Yasnippet templates](#org8f5e03f)
-6. [Org-mode basics](#orgmodebasics)
-  1. [Preamble](#org9de7fe2)
-  2. [Sections and headlines](#org46577b5)
-  3. [Itemised lists](#org9f3c510)
-  4. [Inserting footnotes](#org67a6a45)
-  5. [Tables](#org07e5caf)
-  6. [Images](#org9b3bb64)
-  7. [Captions and cross-references](#org7ceb52a)
-7. [Org-mode and R](#orgmodeandr)
-  1. [Configuration](#org24dbf08)
-  2. [Embedding R code in an Org document](#org0e0b8b5)
-  3. [Code blocks that read data and load functions for later use in the document without any immediate output](#org3526e70)
-  4. [Code blocks that produce results in the form of an Org-mode table](#orgfbb66d6)
-  5. [Code blocks that produce a formatted LaTeX table](#org06d5c56)
-  6. [Code blocks that produce a graph to be included in the document](#orgc674c50)
-  7. [Named R Sessions](#org998ad3c)
-8. [Citations and Bibliographies using Org-mode](#org473190c)
-  1. [Building and maintaining your bibliographic database](#org622f8e1)
-  2. [Using biblatex with Org (under revision)](#org96808fb)
-9. [Producing a formatted LaTeX, pdf, odt, docx or html file](#orgce9c0f4)
-  1. [Formatting tables for LaTeX/PDF export](#tableformatting)
-  2. [Creating LaTeX and/or PDF files](#org9fecb4c)
-  3. [Creating odt or docx files](#orgfb0fa26)
-  4. [HTML](#org6380e00)
-10. [Additional tips and tricks](#org9dff4d2)
-  1. [Defining LaTeX classes](#orgb4ae01d)
-  2. [Evaluating code during export](#org69253b6)
-  3. [Fonts](#org7d73ba2)
-  4. [Page size and margins](#org4637903)
-  5. [Line spacing](#org7279b98)
-  6. [Acknowledgements in footnote](#orgcab648d)
-  7. [Restricting location of tables and images in LaTeX export](#org9ca6f1f)
-  8. [Customising Biblatex style](#org7ed6a5f)
-  9. [Index](#orgb293952)
-11. [Important Resources](#orgc9a0a7e)
+---
 
-<a id="orgb1ffda3"></a>
-
-# Introduction
+#Introduction
 
 This guide introduces an open-source toolkit for academic research and
 writing. The main features of this toolkit centered around Emacs and
@@ -65,7 +15,7 @@ Org-mode are:
 - support for production of final output as pdf, odt, docx, html and
   many other formats.
 
-<a id="orgd6f7e75"></a>
+<a id="orgc90b25b"></a>
 
 ## Will this guide be useful for you?
 
@@ -81,7 +31,7 @@ involves one or more of the following:
 Following this guide would need some investment of time but benefits
 far outweigh the investment you make.
 
-<a id="orgddc68b2"></a>
+<a id="orgec97dfe"></a>
 
 ## What is our goal?
 
@@ -121,7 +71,7 @@ you will set up using this guide?
     tools that will allow us to pull this information directly into
     our local database.
 
-<a id="org5b92873"></a>
+<a id="org22ceafa"></a>
 
 ## Acknowledgements
 
@@ -155,7 +105,7 @@ I would particularly like to thank
 - In addition to the above, Suvayu Ali, for responses to several of my
   queries on the mailing list.
 
-<a id="orga2149ef"></a>
+<a id="org0886f9b"></a>
 
 # Installing necessary software
 
@@ -165,7 +115,7 @@ this setup, you need to install Emacs (Version 24 along with a few
 additional Emacs packages), Texlive, R (along with whatever
 additional R packages you want to use) and Pandoc.
 
-<a id="org102a7fe"></a>
+<a id="org4980734"></a>
 
 ## Emacs
 
@@ -197,7 +147,7 @@ additional R packages you want to use) and Pandoc.
   <http://ftp.gnu.org/gnu/emacs/windows/>, and install.
   
 
-<a id="orgc56215b"></a>
+<a id="org5f9d875"></a>
 
 ## Texlive
 
@@ -216,7 +166,7 @@ additional R packages you want to use) and Pandoc.
   <https://www.tug.org/texlive/doc.html>
   
 
-<a id="org7d4ffdf"></a>
+<a id="org10c6f77"></a>
 
 ## R
 
@@ -229,7 +179,7 @@ for r-base in debian and debian-based distributions). For Mac OS-X and
 Windows, download and see installation instructions at
 <http://www.r-project.org>
 
-<a id="org8ca687a"></a>
+<a id="org23cf48d"></a>
 
 ## Pandoc
 
@@ -245,7 +195,7 @@ use.
 We shall use pandoc to convert our file from LaTeX to odt/docx/html
 formats.
 
-<a id="org9e32d82"></a>
+<a id="org661f435"></a>
 
 # Emacs basics
 
@@ -276,7 +226,7 @@ emacs to get you started. This is a minimal but sufficient set to be
 able to work. I expect that you would learn more commands as you start
 using emacs.
 
-<a id="org4794886"></a>
+<a id="org40fa72e"></a>
 
 ## Notations
 
@@ -293,11 +243,11 @@ together. Everything is case-sensitive. So `M-X` would mean, pressing
 Meta, Shift and x together. `C-c M-x l` would mean pressing C-c,
 release, then M-x, release, and then l.
 
-<a id="orgfb4d485"></a>
+<a id="org3d14ac4"></a>
 
 ## Basic commands
 
-Table [1](#orgcd3f706) gives the commands that are the most
+Table [1](#orgd7bf1e8) gives the commands that are the most
 important. This is a minimal set, commands that you should aim to
 learn as soon as possible. There are many more, which you will learn
 as you start using emacs.
@@ -310,7 +260,7 @@ remember shortcuts for commands that I use most frequently. For
 others, I use the verbose versions. Over time, one learns more
 shortcuts and starts using them instead of the verbose versions.
 
-<table id="orgcd3f706" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgd7bf1e8" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 1:</span> Essential emacs commands</caption>
 
 <colgroup>
@@ -601,7 +551,7 @@ that you need.
 You can copy the above lines, paste them in an empty buffer (e.g.,
 \\\*scratch\\\*), select them, and do M-x eval-region.
 
-<a id="org8f5e03f"></a>
+<a id="org1fbf4de"></a>
 
 # Speed up with Yasnippet templates
 
@@ -617,7 +567,7 @@ illustrate their use in the sections on org-mode.
 
 # Org-mode basics
 
-<a id="org9de7fe2"></a>
+<a id="org6bdaede"></a>
 
 ## Preamble
 
@@ -636,9 +586,9 @@ lines that we shall use.
 As you can see, each line starts with a keyword, and the values for
 this keyword are specified after the colon.
 
-Table [2](#org9b01eff) gives details of a few major special lines that we shall use. The table also gives snippet keywords that can used to create the keyword if you have got the yasnippets from my emacs configuration.
+Table [2](#org1d59128) gives details of a few major special lines that we shall use. The table also gives snippet keywords that can used to create the keyword if you have got the yasnippets from my emacs configuration.
 
-<table id="org9b01eff" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org1d59128" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 2:</span> Main special lines to be used at the top of an Org buffer</caption>
 
 <colgroup>
@@ -715,7 +665,7 @@ document using line such as this:
 
 `#+INCLUDE: path-to-file/papersetup.org`
 
-<a id="org46577b5"></a>
+<a id="org3ece024"></a>
 
 ## Sections and headlines
 
@@ -734,7 +684,7 @@ create as many levels of sections as you need.
 See the following example. Note that headlines are not numbered. We
 leave section numbering for org-mode to handle automatically.
 
-<div class="footnotesize" id="org023dd9a">
+<div class="footnotesize" id="org1142cea">
 <div class="org-src-container">
 <pre class="src src-org"><span style="color: #5B6268;">  #+TITLE:</span> <span style="color: #c678dd; font-weight: bold;">Reproducible Research Papers using Org-mode and R: A Guide</span>
 <span style="color: #5B6268;">  #+AUTHOR:</span> <span style="color: #c678dd;">Vikas Rawal</span>
@@ -829,7 +779,7 @@ the paper develops.
 
 (For further reading, see [Headlines](http://orgmode.org/manual/Headlines.html#Headlines) in the Org-mode manual)
 
-<a id="org9f3c510"></a>
+<a id="orgf4992d2"></a>
 
 ## Itemised lists
 
@@ -908,7 +858,7 @@ Note that:
 - If the cursor is on a line that is part of an itemised list, M-return inserts a new line with a bullet/number below the present
   line with the same level of indentation.
 
-<a id="org67a6a45"></a>
+<a id="org0603797"></a>
 
 ## Inserting footnotes
 
@@ -919,7 +869,7 @@ Note that:
   footnote is being inserted, use `C-u C-c C-x f S`
   
 
-<a id="org07e5caf"></a>
+<a id="orga0d9ecc"></a>
 
 ## Tables
 
@@ -929,7 +879,7 @@ The following sample code produces a reasonably formatted table, with
 a numbered title above the table and a name for cross-referencing the
 table from the text anywhere in the document.
 
-See Table [3](#org7e6c02c) for an illustration of how this table shows
+See Table [3](#org956200f) for an illustration of how this table shows
 up in the final document.
 
 ```
@@ -943,7 +893,7 @@ up in the final document.
  | Punjab         |           260 |          35000 |
 ```
 
-<table id="org7e6c02c" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org956200f" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 3:</span> Simple table created using LaTeX tabular environment</caption>
 
 <colgroup>
@@ -998,11 +948,11 @@ Org-mode has an in-built table editor, which is very simple to use.
 - To delete a row, use `C-k`.
 
 Org provides various commands for manipulating the design of
-tables. Table [4](#org1d527d2) provides the most important
-ones. Note that Table [4](#org1d527d2) is created using Org mode. It
+tables. Table [4](#org76044f9) provides the most important
+ones. Note that Table [4](#org76044f9) is created using Org mode. It
 also gives you an idea of how the table would look eventually.
 
-<table id="org1d527d2" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org76044f9" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 4:</span> Commands to manipulate tables in Org</caption>
 
 <colgroup>
@@ -1073,7 +1023,7 @@ are a result of some statistical analysis, we will embed R programs
 rather than the tables themselves. This is discussed in Section
 [7](#orgmodeandr) of this guide.
 
-<a id="org9b3bb64"></a>
+<a id="orgfacd9bb"></a>
 
 ## Images
 
@@ -1089,7 +1039,7 @@ emacs configuration, you can use yasnippet `ncf` to help in inserting
 a named figure. For graphs produced by R, we will embed the code
 instead, so that the graph is generated and inserted automatically.
 
-<a id="org7ceb52a"></a>
+<a id="org1125184"></a>
 
 ## Captions and cross-references
 
@@ -1144,7 +1094,7 @@ adjusted automatically when you create the formatted output.
 
 # Org-mode and R
 
-<a id="org24dbf08"></a>
+<a id="org85c25a8"></a>
 
 ## Configuration
 
@@ -1170,7 +1120,7 @@ manual, if you would like to add any more.
      (sqlite . t)))
 ```
 
-<a id="org0e0b8b5"></a>
+<a id="org00f0bcf"></a>
 
 ## Embedding R code in an Org document
 
@@ -1200,6 +1150,7 @@ This is how source blocks are created.
   - This would open a new buffer using ESS mode. If you type your code
     in this buffer, you will see that ESS is syntax-aware and nicely
     highlights R code.
+    
   - ESS also allows you to run (evaluate) the code that you write, to
     test what your code is doing. `C-return` or `C-c C-n` can be used
     to evaluate a line/region of code and move to the next line. Or
@@ -1210,6 +1161,7 @@ This is how source blocks are created.
     ```
     
     marked region within the ess buffer.
+    
 - Once you have finished writing a code block and tested it, press
   `C-c '` again to come back to your Org buffer.
   
@@ -1221,7 +1173,7 @@ This is how source blocks are created.
   buffer using C-c&rsquo;
   
 
-<a id="org3526e70"></a>
+<a id="orgdba9223"></a>
 
 ## Code blocks that read data and load functions for later use in the document without any immediate output
 
@@ -1232,7 +1184,7 @@ that these data, libraries and functions become available in my R
 environment. But no output from such code blocks is expected to be
 included into the document.<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
 
-Code block [13](#org1fc6290) is an example of such a code block. Note
+Code block [13](#orgea4ca51) is an example of such a code block. Note
 `:results value silent` switch used in the `#+begin_src` line.
 
 ```
@@ -1243,7 +1195,7 @@ Code block [13](#org1fc6290) is an example of such a code block. Note
 #+END_SRC
 ```
 
-<a id="orgfbb66d6"></a>
+<a id="orgc50f3b3"></a>
 
 ## Code blocks that produce results in the form of an Org-mode table
 
@@ -1267,7 +1219,7 @@ code block does some statistical processing. The last command of the
 code block produces an object (for example, a data frame) that is
 included in the document as a Table.
 
-For example, the code block [14](#org8881bf1) below uses mydata1 read in
+For example, the code block [14](#org135001e) below uses mydata1 read in
 the previous code block, reads a new dataset, and processes them to
 create a table that shows average BMI by country.
 
@@ -1316,7 +1268,7 @@ Like any Org table, you can cross-refer to this table using
 Section [9.1](#tableformatting) discusses how to format tables for LaTeX
 export. All that can be done on tables created by source code blocks.
 
-<a id="org06d5c56"></a>
+<a id="org642a5c1"></a>
 
 ## Code blocks that produce a formatted LaTeX table
 
@@ -1333,9 +1285,9 @@ with tabular, longtable and tabu LaTeX environments to produce tables,
 while [tabularray](https://github.com/turbanisch/tabularray) produces output for tabularray LaTeX environment.
 [kableExtra](https://haozhu233.github.io/kableExtra/) works well with threeparttable.
 
-The code block [16](#org4cada44) shows code that uses kableExtra
+The code block [16](#orgfde0595) shows code that uses kableExtra
 to produce a formatted LaTeX table. Similarly, code block
-[17](#org55ba2e6) shows code that produces a table formatted
+[17](#org07ee373) shows code that produces a table formatted
 for tabularray LaTeX package.
 
 A disadvantage of this approach would be that the results of the code
@@ -1396,7 +1348,7 @@ Org-mode table, and produces LaTeX code meant for export.
 #+end_src
 ```
 
-<a id="orgc674c50"></a>
+<a id="org6be6936"></a>
 
 ## Code blocks that produce a graph to be included in the document
 
@@ -1406,7 +1358,7 @@ produces a graph that we would like to be included in the document.
 The following code shows an example of a code block that produces a
 graph.
 
-<div class="footnotesize" id="orgf50544b">
+<div class="footnotesize" id="org11143d7">
 <div class="org-src-container">
 <pre class="src src-org"><span style="color: #83898d;">  #+name: mygraph-code</span>
 <span style="color: #5B6268; background-color: #23272e;">  #+BEGIN_SRC R :results file graphics :exports results :file bmi2.png :width 825 :height 1050 :fonts serif :res 300</span>
@@ -1464,7 +1416,7 @@ height, maintaining the aspect ratio).
 
 You can now refer to this graph in the text using `[[my-bmi-graph]]`.
 
-<a id="org998ad3c"></a>
+<a id="org54242bd"></a>
 
 ## Named R Sessions
 
@@ -1504,7 +1456,7 @@ sessions. Say, if your paper draws upon two different sets of data and
 analyses, you could process them in two separate R sessions (with
 different working directories, etc).
 
-<a id="org473190c"></a>
+<a id="orgb5ef6a0"></a>
 
 # Citations and Bibliographies using Org-mode
 
@@ -1533,7 +1485,7 @@ development and use of different tools for each of these. John Kitchin
 and Bruce D&rsquo;Arcus have built useful extensions on top of the core
 functionality.
 
-<a id="org622f8e1"></a>
+<a id="org16f333a"></a>
 
 ## Building and maintaining your bibliographic database
 
@@ -1589,7 +1541,7 @@ add entries to your database. org-ref.el provided by John Kitchin
 As a sample, my own bibliographic database is available from
 <https://github.com/indianstatistics/bibliobase/blob/master/bibliobase.bib>.
 
-<a id="org96808fb"></a>
+<a id="orgf49c39b"></a>
 
 ## Using biblatex with Org (under revision)
 
@@ -1681,7 +1633,7 @@ following syntax in square brackets.
 
 Let us understand this syntax. There are four parts in the syntax.
 
-1. cite/style/variant: :: First, you specify the citation style. Table [5](#org3dd09af) lists citations styles and variants available with the biblatex citation processor in org. You can use abbreviations provided in the parentheses rather than the full notation for the citation styles and variants. This part ends in a colon.
+1. cite/style/variant: :: First, you specify the citation style. Table [5](#orgd67c5f5) lists citations styles and variants available with the biblatex citation processor in org. You can use abbreviations provided in the parentheses rather than the full notation for the citation styles and variants. This part ends in a colon.
   
 2. common<sub>prefix</sub>: :: You may optionally use some arbitrary text as prefix. This would be `see` in a citation that you want to export as `(see Seema, 2010 and Nancy, 2011 as examples of this)`. This part ends in a semicolon.
   
@@ -1690,7 +1642,7 @@ Let us understand this syntax. There are four parts in the syntax.
 4. Finally, you may optionally use some arbitrary text as a common suffix. This would be `as examples of this` in the citation to be exported `(see Seema, 2010 and Nancy, 2011 as examples of this)`.
   
 
-<table id="org3dd09af" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgd67c5f5" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 5:</span> Important citation styles and variants provided by the biblatex processor in org</caption>
 
 <colgroup>
@@ -1864,7 +1816,7 @@ the Footnotes)
 #+print_bibliography:
 ```
 
-<a id="orgce9c0f4"></a>
+<a id="orgb999052"></a>
 
 # Producing a formatted LaTeX, pdf, odt, docx or html file
 
@@ -2001,10 +1953,10 @@ Package `tabulary` extends the `tabular` environment by providing
 three additional column types. It is relatively easy to integrate this
 package into orgmode.
 
-Table [6](#org6c615a5) shows different types of columns available
+Table [6](#orgf42c5e8) shows different types of columns available
 in `tabulary` package.
 
-<table id="org6c615a5" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgf42c5e8" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 6:</span> Types of columns in LaTeX tabulary package</caption>
 
 <colgroup>
@@ -2111,7 +2063,7 @@ package) and to properly align headings of table columns.
 With this, you are set to create nicely formatted tables in LaTeX/PDF files.
 
 The following code uses tabularx and siunitx to create a table. The
-output of the code is shown in Table [7](#org61d28a8).
+output of the code is shown in Table [7](#org97f6a70).
 
 In the `:align` specification for `tabularx` tables (with `siunitx`),
 you can use following types of columns:
@@ -2147,7 +2099,7 @@ aligned in the center of the columns.
    | Punjab         |                    260 |                35232.45 |
 ```
 
-<table id="org61d28a8" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org97f6a70" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 7:</span> Table formatted using tabularx and siunitx packages</caption>
 
 <colgroup>
@@ -2337,7 +2289,7 @@ orgmode.
   | Punjab | 260 | 35232.45 | 324 |
   
 
-<table id="orgcec0f71" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgdf65fe2" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 8:</span> Table formatted using tabularray and siunitx packages</caption>
 
 <colgroup>
@@ -2401,7 +2353,7 @@ orgmode.
 </tbody>
 </table>
 
-<a id="org9fecb4c"></a>
+<a id="org13f44e9"></a>
 
 ## Creating LaTeX and/or PDF files
 
@@ -2420,7 +2372,7 @@ For producing LaTeX and/or PDF files, use `C-c C-e` to call the Org export dispa
   - Press o, if you want to create pdf and have it opened in the
     default pdf viewing application.
 
-<a id="orgfb0fa26"></a>
+<a id="org7bba664"></a>
 
 ## Creating odt or docx files
 
@@ -2450,7 +2402,7 @@ If you want, you can use &#x2013;template to specify an ott or a .dotx
 template file, so that the fonts and other formatting attributes are
 to your liking.
 
-<a id="org6380e00"></a>
+<a id="orgebfa910"></a>
 
 ## HTML
 
@@ -2472,7 +2424,7 @@ If you want full support for bibliography and citation styles, as well
 as for other LaTeX components like Table notes explained in this
 document, you can use Pandoc for converting LaTeX to html.
 
-<a id="org9dff4d2"></a>
+<a id="org79ac174"></a>
 
 # Additional tips and tricks
 
@@ -2480,7 +2432,7 @@ This section points some additional solutions that you may like to
 use. Some of these may come handy when you start using Org for
 documenting your research.
 
-<a id="orgb4ae01d"></a>
+<a id="orgcfe17b6"></a>
 
 ## Defining LaTeX classes
 
@@ -2507,7 +2459,7 @@ shows LaTeX classes that are defined in your installation of
 org. Additional options for any latex class can be specified by
 calling another snippet using `lco`.
 
-<a id="org69253b6"></a>
+<a id="orge2187b3"></a>
 
 ## Evaluating code during export
 
@@ -2528,7 +2480,7 @@ If your buffer has this line, the source code is not evaluated at the
 time of export, and whatever already exists in `#+RESULTS` block is
 exported.
 
-<a id="org7d73ba2"></a>
+<a id="org647f156"></a>
 
 ## Fonts
 
@@ -2539,7 +2491,7 @@ the top:
 #+LaTeX_CLASS_OPTIONS: [garamond]
 ```
 
-<a id="org4637903"></a>
+<a id="orge6180b7"></a>
 
 ## TODO Page size and margins
 
@@ -2561,7 +2513,7 @@ documents.
 
 ### TODO Add instructions for memoir
 
-<a id="org7279b98"></a>
+<a id="org9ff9052"></a>
 
 ## Line spacing
 
@@ -2572,7 +2524,7 @@ you.
 #+LATEX_HEADER: \linespread{1.3}
 ```
 
-<a id="orgcab648d"></a>
+<a id="org48ec43b"></a>
 
 ## Acknowledgements in footnote
 
@@ -2598,7 +2550,7 @@ This is achieved as follows.
   #+END_LaTeX
   
 
-<a id="org9ca6f1f"></a>
+<a id="org0c83abb"></a>
 
 ## Restricting location of tables and images in LaTeX export
 
@@ -2622,7 +2574,7 @@ Tables and Images within their own sections.
 An extension to placeins package, [extraplaceins](http://lexfridman.com/blogs/research/2011/03/06/prevent-figures-from-floating-outside-sections-in-latex/) can be used if you
 want to restrict the Tables and Images within subsections.<sup><a id="fnr.6" class="footref" href="#fn.6" role="doc-backlink">6</a></sup>
 
-<a id="org7ed6a5f"></a>
+<a id="org78958dc"></a>
 
 ## Customising Biblatex style
 
@@ -2635,11 +2587,11 @@ add it to your org file.
 
 `#+INCLUDE: /path-to-the-file/vikas-bibstyle.org`
 
-<a id="orgb293952"></a>
+<a id="org861f72d"></a>
 
 ## Index
 
-<a id="orgc9a0a7e"></a>
+<a id="orgd6090c5"></a>
 
 # Important Resources
 
