@@ -2,7 +2,7 @@
 
 ---
 
-#Introduction
+# Introduction
 
 This guide introduces an open-source toolkit for academic research and
 writing. The main features of this toolkit centered around Emacs and
